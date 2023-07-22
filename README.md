@@ -54,17 +54,6 @@ Here are some example outputs from these endpoints:
    ```
 
 
-2. POST `/restaurants/addNewRestaurant`
-   Request body:
-
-```
-{
-    "owner": "615cefd72b3e8272f6c87510",
-    "text": "Just finished reading a great book!"
-}
-```
-
-
 
 ## Sample Usage
 
