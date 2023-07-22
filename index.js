@@ -13,6 +13,6 @@ app.use(cors())
 
 app.use(express.json())
 
-app.use('/resturents', resturentRoutes)
+app.use('/restaurants', resturentRoutes)
 
 app.listen(5000, () => console.log('Server is up and running at port 5000'))

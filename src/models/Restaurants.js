@@ -11,17 +11,25 @@ const restaurantSchema = new Schema ({
         type: String,
         required:true
     },
+    postcode:{
+        type: String,
+        required:true
+    },
+    city:{
+        type: String,
+        required:true
+    },
     openningtime: {
         type: String,
         required:true
     },
     longitude: {
         type: String,
-        required:true    
+        // required:true    
     },
     latitude: {
         type: String,
-        required:true 
+        // required:true 
     },
     image:String,
     cuisine:[{
