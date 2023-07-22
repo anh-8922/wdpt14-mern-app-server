@@ -2,21 +2,29 @@ import mongoose, { Types } from "mongoose";
 
 const { Schema } = mongoose;
 
-const bizSchema = new Schema({
-  text: {
-    type: String,
-    required: true,
+const restaurantSchema = new Schema ({
+  restaurantname: {
+      type: String,
+      required: true,
   },
-  image: String,
-  owner: {
-    type: Schema.Types.ObjectId,
-    ref: "User",
-    required: true,
+  description: {
+      type: String,
+      required:true
   },
-  date: {
-    type: Date,
-    default: Date.now,
+  openningtime: {
+      type: String,
+      required:true
   },
-});
+  cuisine:[{
+      name:{
+          type: String,
+          required: true
+      },
+      price:{
+          type: String,
+          required: true
+      }
+  }]
+})
 
-export default mongoose.model("Biz", bizSchema);
+export default mongoose.model("Restaurant", restaurantSchema)

@@ -1,6 +1,6 @@
-# Twitter Express Server API
+# README for CrossOver Project | MINI YELP 
 
-This repository provides the code for a Twitter-like Express server.
+This repository provides the code for a Mini Yelp server.
 
 The server features several routes that mimic core Twitter functionalities like listing all users, fetching a specific user by their ID, adding new tweets, and fetching tweets.
 
