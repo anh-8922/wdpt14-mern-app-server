@@ -9,10 +9,13 @@ dotenv.config()
 dbConnect()
 const app = express()
 
-app.use(cors())
+app.use(cors({
+    origin: "*",
+    preflightContinue: true,
+  }))
 
 app.use(express.json())
 
-app.use('/restaurants', resturentRoutes)
+app.use('/restaurants', restaurentRoutes)
 
 app.listen(5000, () => console.log('Server is up and running at port 5000'))
