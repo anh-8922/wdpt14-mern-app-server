@@ -19,7 +19,7 @@ The following routes are available:
 
 Here are some example outputs from these endpoints:
 
-1. GET `/restaurants/list`
+1. GET `/restaurants/listall`
 
    ```
    {
@@ -53,7 +53,7 @@ Here are some example outputs from these endpoints:
    }
    ```
 
-
+2. GET ONE `/restaurants/listonerestaurant/:id`
 
 ## Sample Usage
 
@@ -61,4 +61,4 @@ You can use these endpoints in your code using the fetch API, Axios or any other
 
 Here is an example using the fetch API in JavaScript:
 
-`fetch('https://wdpt14-mern-app-server.vercel.app/restaurants/list')`
+`fetch('https://wdpt14-mern-app-server.vercel.app/restaurants/listall')`
