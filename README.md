@@ -61,4 +61,4 @@ You can use these endpoints in your code using the fetch API, Axios or any other
 
 Here is an example using the fetch API in JavaScript:
 
-`fetch('https://twitter-express-server.vercel.app/users/list')`
+`fetch('https://wdpt14-mern-app-server.vercel.app/restaurants/list')`
