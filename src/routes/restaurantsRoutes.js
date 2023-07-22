@@ -7,7 +7,7 @@ import {
 
 const router = express.Router();
 
-router.get('list', handleListRestaurants)
-router.post('addNewRestaurant', handleAddNewRestaurant)
+router.get('/list', handleListRestaurants)
+router.post('/addNewRestaurant', handleAddNewRestaurant)
 
 export default router;
