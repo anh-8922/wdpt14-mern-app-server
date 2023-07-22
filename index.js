@@ -9,7 +9,10 @@ dotenv.config()
 dbConnect()
 const app = express()
 
-app.use(cors())
+app.use(cors({
+    origin: "*",
+    preflightContinue: true,
+  }))
 
 app.use(express.json())
 
