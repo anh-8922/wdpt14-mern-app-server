@@ -1,15 +1,13 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
 
-export default async function () {
+export default async function dbConnect() {
+  try {
+    await mongoose.connect(process.env.DB_URI);
 
-    try {
-        mongoose.set('strictQuery', false);
-        await mongoose.connect(process.env.DB_URI)
-        console.log("🚀 DB connected")
-        
-    } catch (error) {
-        console.log("🚀 ~ register ~ error", error.message)
-
-        process.exit(1)
-    }
+    console.log("CONNECTED TO DB");
+  } catch (error) {
+    console.log("error CONNECTING TO DB:", error.message);
+  }
 }
