@@ -46,9 +46,8 @@ export const handleAddNewRestaurant = async (req, res) => {
         console.log("error add rest:", error)
         res.send({success: false, error})
 }
+  
 }
-
-
 export const handleListOneResturant = async (req, res) => {
     try{
         const id = req.params.id
@@ -64,5 +63,3 @@ export const handleListOneResturant = async (req, res) => {
         res.send({success: false, error})
     }
 }
-
-

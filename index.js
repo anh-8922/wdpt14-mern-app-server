@@ -2,7 +2,7 @@ import  express from 'express'
 import cors from 'cors'
 import dotenv from "dotenv"
 import dbConnect from './src/config/db.js'
-import resturentRoutes from './src/routes/restaurantsRoutes.js'
+import restaurentRoutes from './src/routes/restaurantsRoutes.js'
 
 
 dotenv.config()
