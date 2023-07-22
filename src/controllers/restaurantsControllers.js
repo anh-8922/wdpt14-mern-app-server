@@ -63,3 +63,33 @@ export const handleListOneResturant = async (req, res) => {
         res.send({success: false, error})
     }
 }
+
+
+export const listSearchPosts = async (req, res) => {
+    try {
+      console.log(" hello search ");
+  
+      const text = req.query.text;
+      console.log("text:", text);
+  
+      if (!text)
+        return res.send({ success: false, error: "No search text provided" });
+  
+      const regExp = new RegExp(text, "i");
+  
+      const searchPosts = await Restaurant.find({
+        $or: [
+            { restaurantname: regExp },
+            { description: regExp },
+            { city: regExp },
+            { cuisine: regExp },
+          ]
+      })
+      console.log(" search ", searchPosts);
+      res.send({ success: true, searchPosts });
+    } catch (error) {
+      console.log(" search ~ error", error.message);
+  
+      res.send({ success: false, error: error.message });
+    }
+  };
