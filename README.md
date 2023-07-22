@@ -52,7 +52,7 @@ Here are some example outputs from these endpoints:
     
    }
    ```
-
+2. GET ONE `/restaurants/listonerestaurant/{id}`
 
 
 ## Sample Usage
