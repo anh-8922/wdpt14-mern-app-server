@@ -2,7 +2,7 @@ import  express from 'express'
 import cors from 'cors'
 import dotenv from "dotenv"
 import dbConnect from './src/config/db.js'
-import resturentRoutes from './src/routes/restaurantsRoutes.js'
+import restaurentRoutes from './src/routes/restaurantsRoutes.js'
 
 
 dotenv.config()
@@ -13,6 +13,6 @@ app.use(cors())
 
 app.use(express.json())
 
-app.use('/resturents', resturentRoutes)
+app.use('/restaurants', restaurentRoutes)
 
 app.listen(5000, () => console.log('Server is up and running at port 5000'))
